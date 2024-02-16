@@ -1,0 +1,30 @@
+.bg {
+    width: 100%;
+    height: 92%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+
+}
+
+.px-4 {
+    margin-top: 10%;
+}
+
+.card {
+    width: 350px;
+    border-radius: 35px;
+}
+
+.form-label {
+    float: left;
+}
+
+.card {
+    border-radius: 50px;
+}
+
+#loginForm,
+#registerForm {
+    display: none;
+}
