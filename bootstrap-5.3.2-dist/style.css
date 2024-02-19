@@ -3,7 +3,7 @@
     height: 92%;
     position: absolute;
     z-index: -1;
-    opacity: 0.1;
+    opacity: 0.3;
 
 }
 
@@ -27,4 +27,8 @@
 #loginForm,
 #registerForm {
     display: none;
+}
+
+.custom-btn {
+    width: 100%;
 }

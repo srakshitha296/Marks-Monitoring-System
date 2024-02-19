@@ -1,38 +1,29 @@
 <?php 
 include('header.php');
+include('navigation.php');
 include('connection.php');
 
 // Retrieve student details
 $result = getStudentDetails();
 $message = "";
 $smessage = "";
-$n_usn = "";
-$n_name = "";
-$n_sem = "";
-$n_mentor = "";
-if($result && mysqli_num_rows($result) > 0){
 ?>
-
-<img src="aj2.jpg" alt="" class="img-fluid">
-
 <div class="container-fluid">
-    <div class="container top">
-        <div class="d-grid gap-3 d-md-block my-5 mx-5 text-center ">
-            <a  href="admin_student_details.php"><button  type="button" id="student" class="btn btn-outline-success btn-lg" type="button" onclick="updateBottum('student')">STUDENT</button></a>
-            
-            <button type="button" id="course" class="btn btn-outline-success btn-lg" type="button" onclick="updateBottum('course')">COURSE</button>
+    <div class="row">
+        <div class="col-md-10"></div>
+        <div class="col-md-2 text-end">
+            <a href="home.php"><button type="submit" class="btn btn-danger my-2">Log Out</button></a>
         </div>
     </div>
-    <div class="container bottum " id="bottum">
-        
-    </div>
 </div>
+<img src="cropped.png" alt="" class="img-fluid">
 
 <div class="container">
     <form class="row g-3 my-3" method="POST">
         <h2 class="p-2">ENROLLED STUDENTS</h2>
 
         <?php
+        if($result && mysqli_num_rows($result) > 0){
         $i = 1; // Initialize counter
         
         while ($row = mysqli_fetch_assoc($result)) {
@@ -58,18 +49,24 @@ if($result && mysqli_num_rows($result) > 0){
                 <button type="submit" class="btn btn-danger" name="delete<?php echo $i; ?>">Delete</button>
             </div>
         <?php 
-           
+     $i++;
+    }   
+} else{
+         $message = "No records found.";
+    }
+    ?>
+    </form>
+</div>
+<?php
     // Check if the form was submitted
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
+        for ($j = 1; $j < $i; $j++) {
             //Check if it's an update operation
-            if(isset($_POST['update'.$i])){
-
-                if (isset($_POST['usn'.$i], $_POST['name'.$i], $_POST['sem'.$i], $_POST['mentor'.$i])) {
-                $usn=$_POST['usn'.$i];
-                $name=$_POST['name'.$i];
-                $sem=$_POST['sem'.$i];
-                $mentor=$_POST['mentor'.$i];
+            if(isset($_POST['update'.$j])) {
+                $usn=$_POST['usn'.$j];
+                $name=$_POST['name'.$j];
+                $sem=$_POST['sem'.$j];
+                $mentor=$_POST['mentor'.$j];
 
                 $sql= "UPDATE student set usn = '$usn', name = '$name', sem = $sem, mentor = '$mentor' where usn = '$usn'";
 
@@ -81,11 +78,12 @@ if($result && mysqli_num_rows($result) > 0){
                     echo '<div class="alert alert-danger"><b>Error: Unable to update student details.</b></div>';
                 }
             }
-            }
-
+        }
+        
+             for ($j = 1; $j < $i; $j++) {
             // Check if it's a delete operation for this specific row
-            if (isset($_POST['delete' . $i])) {
-                $usn = $_POST['usn' . $i];
+            if (isset($_POST['delete' . $j])) {
+                $usn = $_POST['usn' . $j];
 
                 $sql = "DELETE FROM student WHERE usn = '$usn'";
                 $result = mysqli_query($conn, $sql);
@@ -97,22 +95,14 @@ if($result && mysqli_num_rows($result) > 0){
                 }
             }
     }
-        $i++;
 }
-?> 
-<?php echo $message; ?>
- <?php } else{
-         $message = "No records found.";
-    }
-    ?>
-    </form>
-   
+mysqli_close($conn); ?>
 
-    <?php
+<?php
         include('connection.php');
         $message = '';  // Variable to store the message
 
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['upload'])){
             $n_usn = $_POST['n_usn'];
             $n_name = $_POST['n_name'];
             $n_sem = $_POST['n_sem'];
@@ -138,6 +128,14 @@ if($result && mysqli_num_rows($result) > 0){
                               $sql = "INSERT INTO `student` (`usn`, `name`, `sem`, `mentor`) VALUES ('$n_usn', '$n_name', '$n_sem', '$n_mentor')";
                               $result = mysqli_query($conn, $sql);
 
+                              $courses = array("evs", "atc", "cn", "dbms", "aiml", "csharp", "dbmslab", "rm");
+                              $arrayLength = count($courses);
+                              for($i=0; $i<$arrayLength; $i++){
+                                $querry = "INSERT into $courses[$i] (`usn`) values ('$n_usn')";
+                                $op = mysqli_query($conn, $querry);
+                              }
+
+
                               if($result){
                                 $smessage = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <strong>SUCCESS!</strong> Enrolled new student with USN: '.$n_usn.'.
@@ -147,6 +145,7 @@ if($result && mysqli_num_rows($result) > 0){
                           }
                         }
                         ?>
+<div class="container fluid">
     <form method="POST" class="row g-3 my-3" action="/DBMS/bootstrap-5.3.2-dist/admin_student_details.php">
         <h2 class="p-2">ENROLL NEW STUDENT</h2>
         <div class="col-md-2">

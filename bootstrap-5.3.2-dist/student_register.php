@@ -42,6 +42,16 @@
                                  Already Registered with USN: '.$usn.'.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>';
+                            } else {
+                            // Check if the student is in the admin's list
+                            $adminCheckSql = "SELECT * FROM `student` WHERE `usn`='$usn'";
+                            $adminCheckResult = mysqli_query($conn, $adminCheckSql);
+
+                            if (mysqli_num_rows($adminCheckResult) == 0) {
+                            // Set the message if the student is not found in the admin's list
+                            $message = '<div class="alert alert-danger" role="alert">
+                            No such Student in the classroom.
+                            </div>';
                           } else {
                               $sql = "INSERT INTO `student_registration`(`usn`, `name`, `password`) VALUES ('$usn','$name','$password')";
                               $result = mysqli_query($conn, $sql);
@@ -54,6 +64,7 @@
                               }
                           }
                         }
+                      }
                         ?>
 
                         <form method="post" action="/DBMS/bootstrap-5.3.2-dist/student_register.php">

@@ -51,15 +51,7 @@ $sql = "SELECT a.ia1 as ATC_IA1, a.ia2 as ATC_IA2, a.ia3 as ATC_IA3, a.ass as AT
 
 ?>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-10"></div>
-        <div class="col-md-2 text-end">
-            <a href="home.php"><button type="submit" class="btn btn-danger my-2">Log Out</button></a>
-        </div>
-    </div>
-</div>
-<div class="container-fluid text-center p-3 my-3 rounded">
+<div class="container-fluid text-center p-3 my-5 rounded">
      <div class="row ">
         <div class="col-lg-2 col-md-3 col-sm-4 p-3 shadow-lg">
             <form method="post" action="">
@@ -75,7 +67,7 @@ $sql = "SELECT a.ia1 as ATC_IA1, a.ia2 as ATC_IA2, a.ia3 as ATC_IA3, a.ass as AT
         </form>
         </div>
 
-         <div class="col-lg-9 col-md-9 col-sm-8 shadow-lg p-3 bg-body-tertiary rounded " id="rightColumn" >
+         <div class="col-lg-9 col-md-9 col-sm-8 shadow-lg p-3 bg-body-tertiary rounded" id="rightColumn" >
         
         <?php 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -85,47 +77,16 @@ $sql = "SELECT a.ia1 as ATC_IA1, a.ia2 as ATC_IA2, a.ia3 as ATC_IA3, a.ass as AT
         // Perform action based on the button clicked
         switch ($action) {
             case 'atc':
-                $_SESSION['course'] = 'atc';
-                include('sub_report.php');
+                // Handle ATC action
+                // You can include the corresponding PHP code here
                 break;
-
             case 'cn':
-                $_SESSION['course'] = 'cn';
-                include('sub_report.php');
+                // Handle CN action
                 break;
-            
-            case 'dbms':
-                $_SESSION['course'] = 'dbms';
-                include('sub_report.php');
-                break;
-
-            case 'aiml':
-                $_SESSION['course'] = 'aiml';
-                include('sub_report.php');
-                break;
-
-            case 'dbmslab':
-                $_SESSION['course'] = 'dbmslab';
-                include('sub_report.php');
-                break;
-
-            case 'rm':
-                $_SESSION['course'] = 'rm';
-                include('sub_report.php');
-                break;
-
-            case 'evs':
-                $_SESSION['course'] = 'evs';
-                include('sub_report.php');
-                break;
-
-            case 'csharp':
-                $_SESSION['course'] = 'csharp';
-                include('sub_report.php');
-                break;
+            // Add cases for other actions...
 
             case 'report':
-                $_SESSION['course'] = 'report';
+                // Include the PHP code for generating the report
                 include('report_content.php');
                 break;
 
