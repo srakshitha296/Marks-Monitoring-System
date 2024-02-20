@@ -30,7 +30,7 @@
                     while($rows = mysqli_fetch_assoc($result)){
                  ?>
                  <tr>
-                    <th scope="row">21CSX1</th>
+                    <th scope="row">21CS51</th>
                     <td>ATC</td>
                     <td><?php echo $rows['ATC_IA1']; ?></td>
                     <td><?php echo $rows['ATC_IA2']; ?></td>
@@ -41,7 +41,7 @@
                     <td><?php echo $rows['ATC_TOTAL']; ?></td>
                 </tr>
                 <tr>
-                    <th scope="row">21CSX2</th>
+                    <th scope="row">21CS52</th>
                     <td>CN</td>
                     <td><?php echo $rows['CN_IA1']; ?></td>
                     <td><?php echo $rows['CN_IA2']; ?></td>
@@ -52,7 +52,7 @@
                     <td><?php echo $rows['CN_TOTAL']; ?></td>
                 </tr>
                 <tr>
-                    <th scope="row">21CSX3</th>
+                    <th scope="row">21CS53</th>
                     <td>DBMS</td>
                     <td><?php echo $rows['DBMS_IA1']; ?></td>
                     <td><?php echo $rows['DBMS_IA2']; ?></td>
@@ -63,7 +63,7 @@
                     <td><?php echo $rows['DBMS_TOTAL']; ?></td>
                 </tr>
                 <tr>
-                    <th scope="row">21CSX4</th>
+                    <th scope="row">21CS54</th>
                     <td>AIML</td>
                     <td><?php echo $rows['AIML_IA1']; ?></td>
                     <td><?php echo $rows['AIML_IA2']; ?></td>
@@ -74,7 +74,7 @@
                     <td><?php echo $rows['AIML_TOTAL']; ?></td>
                 </tr>
                 <tr>
-                    <th scope="row">21CSX5</th>
+                    <th scope="row">21CSL55</th>
                     <td>DBMSL</td>
                     <td><?php echo $rows['DBMSLAB_IA1']; ?></td>
                     <td><?php echo $rows['DBMSLAB_IA2']; ?></td>
@@ -85,7 +85,7 @@
                     <td><?php echo $rows['DBMSLAB_TOTAL']; ?></td>
                 </tr>
                 <tr>
-                    <th scope="row">21CSX6</th>
+                    <th scope="row">21RMI56</th>
                     <td>RM</td>
                     <td><?php echo $rows['RM_IA1']; ?></td>
                     <td><?php echo $rows['RM_IA2']; ?></td>
@@ -96,7 +96,7 @@
                     <td><?php echo $rows['RM_TOTAL']; ?></td>
                 </tr>
                 <tr>
-                    <th scope="row">21CSX7</th>
+                    <th scope="row">21CIV57</th>
                     <td>EVS</td>
                     <td><?php echo $rows['EVS_IA1']; ?></td>
                     <td><?php echo $rows['EVS_IA2']; ?></td>
@@ -107,7 +107,7 @@
                     <td><?php echo $rows['EVS_TOTAL']; ?></td>
                 </tr>
                 <tr>
-                    <th scope="row">21CSX8</th>
+                    <th scope="row">21CS582</th>
                     <td>C#</td>
                     <td><?php echo $rows['CSHARP_IA1']; ?></td>
                     <td><?php echo $rows['CSHARP_IA2']; ?></td>

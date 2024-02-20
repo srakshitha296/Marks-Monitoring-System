@@ -52,13 +52,13 @@ $result = getStudentMarks($table_name);
     <div class="row">
         <div class="col-md-10"></div>
         <div class="col-md-2 text-end">
-            <a href="home.php"><button type="submit" class="btn btn-danger my-2">Log Out</button></a>
+            <a href="home.php"><button type="submit" class="btn btn-danger mt-2">Log Out</button></a>
         </div>
     </div>
 </div>
 <div class="container">
     <form class="row g-3 " method="POST">
-        <h2 class="p-2 my-5 text-center"><?php echo $sub_code; ?></h2>
+        <h2 class="p-2 mb-5 text-center"><?php echo $sub_code; ?></h2>
         <div class="col-md-2"><h4>USN</h4></div>
         <div class="col-md-1"><h4>IA 1</h4></div>
         <div class="col-md-1"><h4>IA 2</h4></div>

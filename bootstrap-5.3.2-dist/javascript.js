@@ -16,46 +16,6 @@ function showLoginForm() {
     loginForm.style.display = 'block';
 }
 
-function updateRightColumn(option) {
-    // var rightColumn = document.querySelector('.col-9');
-    var rightColumn = document.getElementById('rightColumn');
-
-    // Clear previous content
-    rightColumn.innerHTML = '<img class="bg" src="bgi.png" alt="">';
-
-    // Add content based on the selected option
-    switch (option) {
-        case 'atc':
-            rightColumn.innerHTML = '<img src="adminbg.jpg">';
-            break;
-        case 'cn':
-            rightColumn.innerHTML = '<p>This is the content for CN.</p>';
-            break;
-        case 'dbms':
-            rightColumn.innerHTML = '<p>This is the content for DBMS.</p>';
-            break;
-        case 'aiml':
-            rightColumn.innerHTML = '<p>This is the content for AIML.</p>';
-            break;
-        case 'dbmslab':
-            rightColumn.innerHTML = '<p>This is the content for DBMS Lab.</p>';
-            break;
-        case 'rm':
-            rightColumn.innerHTML = '<p>This is the content for RM.</p>';
-            break;
-        case 'evs':
-            rightColumn.innerHTML = '<p>This is the content for EVS.</p>';
-            break;
-        case 'c#':
-            rightColumn.innerHTML = '<p>This is the content for C#.</p>';
-            break;
-        case 'report':
-            rightColumn.innerHTML = '<p>This is the content for Report.</p>';
-            break;
-        // Add more cases for other options
-    }
-}
-
 
 function updateBottum(option) {
     var bottum = document.getElementById('bottum');
