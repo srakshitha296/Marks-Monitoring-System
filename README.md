@@ -49,6 +49,5 @@
   <a href="https://www.linkedin.com/in/rakshitha-shetty-b6134724b/" target="blank"><img align="center" src="https://github.com/devicons/devicon/blob/master/icons/linkedin/linkedin-original.svg" alt="_rakshetty_" height="30" width="40" /></a>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
 
 
