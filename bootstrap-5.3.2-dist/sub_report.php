@@ -11,7 +11,7 @@
         $result = mysqli_query($conn, $sql);
 ?>
 
-<div class="container-fluid">
+<div class="container-fluid offset-md-3 my-5">
     <form>
         <?php 
             while($row = mysqli_fetch_assoc($result)){ ?>

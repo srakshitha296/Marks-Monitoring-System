@@ -4,13 +4,14 @@
 <!--Include the navigation bar -->
 <?php include('navigation.php'); ?>
 
-<img class="bg" src="bgi.png" alt="">
+<!-- <img class="bg" src="bgi.png" alt=""> -->
+<img class="bg" src="images.jpeg" alt="">
 
 <!--Create a container-->
 <div class="container px-4 text-left ">
-    <h1>STUDENT <br>
-        MENTORING SYSTEM</h1>
-    <P CLASS="fst-italic">Fostering deep connections, mentors guide students in academics and life.</P>
+    <h1>MARKS <br>
+        MONITORING SYSTEM</h1>
+    <P CLASS="fst-italic"><b>An online platform for handling and viewing of academic records.</b></P>
 </div>
        
  

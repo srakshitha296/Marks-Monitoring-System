@@ -17,6 +17,7 @@ $smessage = "";
     </div>
 </div>
 <img src="cropped.png" alt="" class="img-fluid">
+<!-- <img src="aj2.jpg" alt="" class="img-fluid"> -->
 
 <div class="container">
     <form class="row g-3 my-3" method="POST">

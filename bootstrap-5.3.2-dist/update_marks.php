@@ -47,8 +47,9 @@ if(isset($_SESSION['sub_code'])) {
 $result = getStudentMarks($table_name);
 ?>
 
-<img src="bg2.png" alt="" class="bg">
-<div class="container-fluid">
+<!-- <img src="bg2.png" alt="" class="bg"> -->
+<div class="container-fluid" style="background-color:#D3D3D3;">
+<div class="container-fluid" >
     <div class="row">
         <div class="col-md-10"></div>
         <div class="col-md-2 text-end">
@@ -57,7 +58,7 @@ $result = getStudentMarks($table_name);
     </div>
 </div>
 <div class="container">
-    <form class="row g-3 " method="POST">
+    <form class="row g-3 offset-md-1" method="POST">
         <h2 class="p-2 mb-5 text-center"><?php echo $sub_code; ?></h2>
         <div class="col-md-2"><h4>USN</h4></div>
         <div class="col-md-1"><h4>IA 1</h4></div>
@@ -67,7 +68,7 @@ $result = getStudentMarks($table_name);
         <div class="col-md-1"><h4>Internal</h4></div>
         <div class="col-md-1"><h4>External</h4></div>
         <div class="col-md-1"><h4>Total</h4></div>
-        <div class="col-md-2"><h4>Update</h4></div>
+        <div class="col-md-3"><h4>Update</h4></div>
         <?php
         if($result && mysqli_num_rows($result) > 0){
         $i = 1; 
@@ -110,7 +111,7 @@ $i++;
     }
     ?>
     </form>
-</div>
+</div></div>
 <?php 
 // Check if the form was submitted
     if($_SERVER['REQUEST_METHOD'] == 'POST'){

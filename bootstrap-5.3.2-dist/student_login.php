@@ -41,7 +41,7 @@
                                         }
                                         else {
                                             // Student is not registered
-                                            $message = '<p class="text-danger">Not yet registered ? </p>';
+                                            $message = '<p class="text-danger">Not yet registered ? <p class="mt-3 text-center"><a href="student_register.php" onclick="showRegisterForm()">Register</a></p></p>';
                                         }
                                     }
                                     ?>
@@ -55,9 +55,10 @@
                             <input name="password" type="password" class="form-control" id="password" placeholder="Enter your password" required>
                           </div>
                           <button type="submit" class="btn btn-success btn-block">Login</button>
+                          <p><a href="student_register.php" onclick="showRegisterForm()">Register</a></p>
                           <?php echo $message; ?>
                         </form>
-                        <p class="mt-3 text-center"><a href="student_register.php" onclick="showRegisterForm()">Register</a></p>
+                    
                       </div>
                     </div>
                   </div>

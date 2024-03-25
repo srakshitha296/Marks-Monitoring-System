@@ -59,8 +59,8 @@ $sql = "SELECT a.ia1 as ATC_IA1, a.ia2 as ATC_IA2, a.ia3 as ATC_IA3, a.ass as AT
         </div>
     </div>
 </div>
-<div class="container-fluid text-center p-3 my-3 rounded">
-     <div class="row ">
+<div class="container-fluid text-center p-3 my-3 rounded ">
+     <div class="row "> 
         <div class="col-lg-2 col-md-3 col-sm-4 p-3 shadow-lg">
             <form method="post" action="">
             <button type="submit" class="btn btn-dark custom-btn mt-2 mb-2"  name="action" value="atc" >ATC</button><br>

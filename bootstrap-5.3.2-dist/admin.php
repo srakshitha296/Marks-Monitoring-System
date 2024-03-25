@@ -1,7 +1,7 @@
 <?php include("header.php"); ?>
 <?php include("navigation.php"); ?>
 
-<img class="bg" src="cropped.png" alt=""> 
+<!-- <img class="bg" src="cropped.png" alt="">  -->
 
 <h2 class="text-center my-4 ">Admin</h2>
 
