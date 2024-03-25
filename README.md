@@ -1,6 +1,6 @@
 
 <h1 align="center">MARKS MONITORING SYSTEM</h1>
-<h3 align="justified">The Marks Monitoring System is a digital solution designed to streamline the process of managing and accessing student assessment marks within educational institutions. By focusing solely on the digitalization of student marks, the Marks Monitoring System aims to simplify and enhance the efficiency of academic record-keeping. The system consists of three key modules: the Admin Module, Faculty Module, and Student Module. The Admin Module provides administrators with tools to input and manage student details, ensuring accurate records and overseeing user accounts. Faculty members can utilize the Faculty Module to input, update, and review student assessment marks, simplifying grading tasks. Students benefit from the Student Module, which offers a personalized dashboard to access their assessment marks and monitor their academic progress. With its streamlined approach to digitalizing student marks, the Marks Monitoring System promotes efficiency, accuracy, and accessibility in academic record management, ultimately enhancing the educational experience for all stakeholders involved.</h3>
+<h3 align="center">The Marks Monitoring System is a digital solution designed to streamline the process of managing and accessing student assessment marks within educational institutions. By focusing solely on the digitalization of student marks, the Marks Monitoring System aims to simplify and enhance the efficiency of academic record-keeping. The system consists of three key modules: the Admin Module, Faculty Module, and Student Module. The Admin Module provides administrators with tools to input and manage student details, ensuring accurate records and overseeing user accounts. Faculty members can utilize the Faculty Module to input, update, and review student assessment marks, simplifying grading tasks. Students benefit from the Student Module, which offers a personalized dashboard to access their assessment marks and monitor their academic progress. With its streamlined approach to digitalizing student marks, the Marks Monitoring System promotes efficiency, accuracy, and accessibility in academic record management, ultimately enhancing the educational experience for all stakeholders involved.</h3>
 
 <h3 align="left">Softwares Required</h3>
 
@@ -12,7 +12,7 @@
 
 
 <h3 align="left">Home Page</h3>
-<img src="./Images/HomePage.jpg">
+<img src="./Images/HomePage.png">
 
 <h3 align="left">Admin Log In Page</h3>
 <img src="./Images/Admin LogIn.png">
@@ -33,7 +33,7 @@
 <img src="./Images/Student_Registration.png">
 
 <h3 align="left">Student Log In page</h3>
-<img src="./Images/Student login.png.jpg">
+<img src="./Images/Student login.png">
 
 <h3 align="left">Subject wise mark distribution</h3>
 <img src="./Images/per_sub_mark.png">
