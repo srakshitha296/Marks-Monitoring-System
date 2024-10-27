@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "student_mentoring_system";
+$database = "marks monitoring system";
 
 $conn=mysqli_connect($servername, $username, $password, $database) or die("Connection error");
 

@@ -2,17 +2,12 @@
 
 /*Student table owned by Admin*/
 create table student(
-usn varchar(15),
+usn varchar(15) not null,
 name varchar(20),
 sem int,
 mentor varchar(20),
 primary key(usn)
 );
-
-ALTER TABLE student
-modify COLUMN usn varchar(15) not null;
-
-select * from atc;
 
 /**Inserting dStudent data by the Admin**/
 insert into student values('4JK21CS001', 'Abhishek', 5, 'Mrs.Nayana Yadav');
@@ -77,7 +72,7 @@ foreign key(usn) references student(usn) on delete cascade
 );
 
 insert into atc values('4JK21CS048',20, 20, 20, 0, 0, 0, 0);
-insert into atc values('4JK21CS041',19, 20, 0, 0, 0, 0, 0);
+insert into atc values('4JK21CS016',19, 20, 0, 0, 0, 0, 0);
 
 /*Table for CN*/
 create table cn(
@@ -94,7 +89,7 @@ foreign key(usn) references student(usn) on delete cascade
 );
 
 insert into cn values('4JK21CS048',0, 0, 20, 0, 0, 0, 0);
-insert into cn values('4JK21CS041',10, 0, 0, 0, 0, 0, 0);
+insert into cn values('4JK21CS016',10, 0, 0, 0, 0, 0, 0);
 
 /*Table for DBMS*/
 create table dbms(
@@ -111,7 +106,7 @@ foreign key(usn) references student(usn) on delete cascade
 );
 
 insert into dbms values('4JK21CS048',0, 0, 20, 0, 0, 0, 0);
-insert into dbms values('4JK21CS041',0, 0, 20, 0, 0, 0, 0);
+insert into dbms values('4JK21CS016',0, 0, 20, 0, 0, 0, 0);
 
 /*Table for AIML*/
 create table aiml(
@@ -128,7 +123,7 @@ foreign key(usn) references student(usn) on delete cascade
 );
 
 insert into aiml values('4JK21CS048', 15, 17, 0, 0, 0, 0, 0);
-insert into aiml values('4JK21CS041', 14, 15, 0, 0, 0, 0, 0);
+insert into aiml values('4JK21CS016', 14, 15, 0, 0, 0, 0, 0);
 
 /*Table for DBMSLab*/
 create table dbmslab(
@@ -145,7 +140,7 @@ foreign key(usn) references student(usn) on delete cascade
 );
 
 insert into dbmslab values('4JK21CS048',0, 0, 0, 0, 0, 0, 0);
-insert into dbmslab values('4JK21CS041',15, 16, 0, 0, 0, 0, 0);
+insert into dbmslab values('4JK21CS016',15, 16, 0, 0, 0, 0, 0);
 
 /*Table for RM*/
 create table rm(
@@ -162,7 +157,7 @@ foreign key(usn) references student(usn) on delete cascade
 );
 
 insert into rm values('4JK21CS048',10, 10, 0, 0, 0, 0, 0);
-insert into rm values('4JK21CS041',16, 18, 0, 0, 0, 0, 0);
+insert into rm values('4JK21CS016',16, 18, 0, 0, 0, 0, 0);
 
 /*Table for EVS*/
 create table evs(
@@ -179,7 +174,7 @@ foreign key(usn) references student(usn) on delete cascade
 );
 
 insert into evs values('4JK21CS048',10, 10, 0, 0, 0, 0, 0);
-insert into evs values('4JK21CS041',16, 0, 0, 0, 0, 0, 0);
+insert into evs values('4JK21CS016',16, 0, 0, 0, 0, 0, 0);
 
 /*Table for C#*/
 create table csharp(
@@ -196,7 +191,7 @@ foreign key(usn) references student(usn) on delete cascade
 );
 
 insert into csharp values('4JK21CS048',0, 0, 0, 0, 0, 0, 0);
-insert into csharp values('4JK21CS041',0, 0, 0, 0, 0, 0, 0);
+insert into csharp values('4JK21CS016',0, 0, 0, 0, 0, 0, 0);
 
 /*Table of Report*/
 CREATE TABLE report (
@@ -236,8 +231,9 @@ select a.ia1 as ATC_IA1, a.ia2 as ATC_IA2, a.ia3 as ATC_IA3, a.ass as ATC_ASS, a
 			AND f.usn = "4JK21CS048" 
 			AND g.usn = "4JK21CS048" 
 			AND h.usn = "4JK21CS048";
-use student_mentoring_system;
 
 select * from report;
-drop table report;
+
 desc student;
+
+
